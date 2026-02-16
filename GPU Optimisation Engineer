@@ -1,0 +1,57 @@
+Job description
+What Youll Do
+
+• Optimize model architectures (ASR, TTS, SLMs) for maximum performance on
+
+specific GPU hardware
+
+• Profile models end-to-end to identify GPU bottlenecks — memory bandwidth, kernel
+
+launch overhead, fusion opportunities, quantization constraints
+
+• Design and implement custom kernels (CUDA/Triton/Tinygrad) for performance-
+
+critical model sections
+
+• Perform operator fusion, graph optimization, and kernel-level scheduling
+
+improvements
+
+• Tune models to fit GPU memory limits while maintaining quality
+
+• Benchmark and calibrate inference across NVIDIA, AMD, and potentially emerging
+
+accelerators
+
+• Port models across GPU chipsets (NVIDIA AMD / edge GPUs / new compute
+
+backends)
+
+• Work with TensorRT, ONNX Runtime, and custom runtimes for deployment
+
+• Partner with the research and infra teams to ensure the entire stack is optimized for
+
+real-time workloads
+
+Requirements
+
+• Strong understanding of GPU architecture — SMs, warps, memory hierarchy,
+
+occupancy tuning
+
+• Hands-on experience with CUDA, kernel writing, and kernel-level debugging
+
+Experience with kernel fusion and model graph optimizations
+
+• Familiarity with TensorRT, ONNX, Triton, tinygrad, or similar inference engines
+
+
+• Strong proficiency in PyTorch and Python
+
+• Deep understanding of model architectures (transformers, convs, RNNs, attention,
+
+diffusion blocks)
+
+• Experience profiling GPU workloads using Nsight, nvprof, or similar tools
+
+• Strong problem-solving abilities with a performance-first mindset
