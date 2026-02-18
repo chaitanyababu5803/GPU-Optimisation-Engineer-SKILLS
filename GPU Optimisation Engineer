@@ -55,3 +55,50 @@ diffusion blocks)
 • Experience profiling GPU workloads using Nsight, nvprof, or similar tools
 
 • Strong problem-solving abilities with a performance-first mindset
+*******************************
+basic exmaple with code
+A classic "Hello World" for GPU optimization is Vector Addition. Below is a basic implementation in CUDA (C++) that demonstrates how to move data and execute code in parallel, followed by how an engineer would optimize it. 
+1. Basic Vector Addition (CUDA C++)
+This code performs 
+ across millions of elements simultaneously. 
+eunomia.dev
+eunomia.dev
+ +1
+cpp
+// Kernel: Parallel addition on GPU
+__global__ void vectorAdd(const float *A, const float *B, float *C, int N) {
+    int i = blockDim.x * blockIdx.x + threadIdx.x; // Coalesced access
+    if (i < N) C[i] = A[i] + B[i];
+}
+// Main: Allocates, copies, launches, and cleans up
+// (Code omitted for brevity, see [eunomia.dev](
+Use code with caution.
+
+cpp
+https://eunomia.dev/others/cuda-tutorial/01-vector-addition/
+Use code with caution.
+
+cpp
+))
+Use code with caution.
+
+ 
+2. Optimization Techniques
+Engineers improve upon the naive approach using several methods:
+Memory Coalescing: Ensuring adjacent threads access adjacent memory to maximize bandwidth.
+Vectorized Loads: Using types like float4 to read multiple data points in one instruction.
+Pinned Memory & Asynchronous Transfers: Using cudaMallocHost allows data transfer to overlap with kernel execution.
+Shared Memory (Tiling): Moving data to faster on-chip cache to reduce global DRAM access. 
+NVIDIA Developer
+NVIDIA Developer
+ +4
+3. Profiling & Tools
+Engineers use NVIDIA Nsight Systems for timeline analysis and NVIDIA Nsight Compute to identify if a kernel is memory or compute-bound. 
+eunomia.dev
+eunomia.dev
+Would you like to see how to optimize this further using Shared Memory or Unified Memory?
+
+
+
+
+***************************************
